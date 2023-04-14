@@ -1,7 +1,5 @@
 @use "../abstracts/" as *;
 
-// ? Transition is inherit from :Root
-
 body {
   font-weight: $body-font-weight;
   font-size: $body-font-size;
@@ -9,6 +7,4 @@ body {
   line-height: $body-line-height;
 
   background-color: var(--bg-color);
-
-  transition: inherit;
 }

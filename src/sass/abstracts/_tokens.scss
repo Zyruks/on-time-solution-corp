@@ -1,0 +1,53 @@
+@use "colors" as *;
+@use "functions" as *;
+@use "sizes" as *;
+@use "typography" as *;
+
+/* Move this to other file */
+
+// border-radius
+$border-radius-1: $size-2;
+$border-radius-2: $size-4;
+
+// shadows
+$box-shadow-1: 0 $size-1 $size-4 rgb(0 0 0 / 10%);
+$box-shadow-2: 0 $size-1 $size-4 rgb(0 0 0 / 15%);
+
+// layout
+$grid-gap: $size-12;
+$flex-group-gap: $size-4;
+$hero-padding-block: clamp(15rem, 15vh, 20rem);
+$section-padding-block: clamp(3rem, 10vh, 7rem);
+$section-inline-padding: $size-4;
+$card-body-padding: $size-8;
+$container-min-margin-inline: $size-4;
+$container-max-width: 80rem;
+
+// ?colors
+
+// ? contextual color tokens
+$color-neutral-100: var(--color-neutral-100);
+$color-neutral-200: var(--color-neutral-200);
+$color-neutral-300: var(--color-neutral-300);
+$color-neutral-400: var(--color-neutral-400);
+$color-neutral-700: var(--color-neutral-700);
+$color-neutral-800: var(--color-neutral-800);
+$color-neutral-900: var(--color-neutral-900);
+$letter-spacing-loose: 0.16em;
+
+// ? body - light
+$body-font-family: $font-family-base;
+$body-font-size: $font-size-400;
+$body-line-height: 1.5;
+$body-font-weight: $font-weight-default;
+$body-text-color-light: $color-text-light;
+$body-background-color-light: $color-background-light;
+
+// ? general
+$link-color: none;
+$link-color-hover: none;
+$heading-font-family: $font-family-accent;
+$heading-font-weight: $font-weight-bold;
+$heading-letter-spacing: $letter-spacing-loose;
+$heading-line-height: 1;
+$heading-text-transform: uppercase;

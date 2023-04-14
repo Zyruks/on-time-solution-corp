@@ -1,0 +1,6 @@
+{
+  "./src/**/**/**/**/**/*.astro": [
+    "eslint --ext .astro --parser astro-eslint-parser",
+    "astro check"
+  ]
+}

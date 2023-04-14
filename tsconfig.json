@@ -1,0 +1,22 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "target": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "types": ["@astrojs/image/client"],
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "checkJs": true,
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "*": ["*", "commitlint.config.cjs", "astro.config.mjs"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts", "astro.config.mjs"]
+}

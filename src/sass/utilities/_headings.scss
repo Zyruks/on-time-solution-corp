@@ -3,22 +3,29 @@
 .heading-1 {
   color: var(--text-color);
   font-weight: $heading-font-weight;
-  font-size: $font-size-500;
-
+  font-size: 26px;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   letter-spacing: inherit;
   text-transform: uppercase;
+
+  @include mq(large) {
+    font-size: 80px;
+  }
 }
 
 .heading-2 {
   color: var(--text-color);
   font-weight: $font-weight-bold;
-  font-size: $font-size-700;
+  font-size: 34.5px;
+
+  @include mq(large) {
+    font-size: 80px;
+  }
 }
 
 .heading-3 {
   color: var(--text-color);
   font-weight: $font-weight-bold;
-  font-size: $font-size-600;
+  font-size: 32px;
 }

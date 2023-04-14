@@ -38,10 +38,6 @@
   color: "FBCA04"
   description: Issues related to technical debt, such as refactoring or cleaning up code.
 
-- name: "Discord"
-  color: "5319E7"
-  description: Issues related to the project's Discord community or communication channels.
-
 - name: "Type: Enhancement"
   color: "54b2ff"
   description: Suggest an improvement for an existing feature.

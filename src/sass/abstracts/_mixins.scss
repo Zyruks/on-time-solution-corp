@@ -23,23 +23,3 @@
     @error "the keyword #{$size} is not in the $breakpoints map";
   }
 }
-
-@mixin heading(
-  $fs,
-  $light-color: $heading-color-light,
-  $heading-dark-color: $heading-color-dark,
-  $text-transform: $heading-text-transform
-) {
-  color: $light-color;
-  font-weight: $heading-font-weight;
-  font-size: $fs;
-
-  font-family: $heading-font-family;
-  line-height: $heading-line-height;
-  letter-spacing: inherit;
-  text-transform: $text-transform;
-
-  @media (prefers-color-scheme: dark) {
-    color: $heading-color-dark;
-  }
-}

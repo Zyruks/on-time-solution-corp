@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.btn {
+  border: none;
+  border-radius: $border-radius-1;
+
+  color: $color-neutral-100;
+  font-weight: $font-weight-bold;
+
+  background-color: $color-primary-400;
+  padding-block: $size-4;
+  padding-inline: $size-10;
+
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+
+  &:hover {
+    color: $color-primary-400;
+
+    background-color: $color-neutral-100;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.header {
+  block-size: rem(60);
+
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+
+  background-color: hsla(0deg 0% 33% / 50%);
+
+  @include mq(medium) {
+    .container {
+      flex-wrap: nowrap;
+      justify-content: center;
+      block-size: 100%;
+    }
+
+    background-color: hsla(0deg 0% 33% / 50%);
+  }
+}

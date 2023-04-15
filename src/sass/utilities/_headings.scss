@@ -1,17 +1,14 @@
 @use "../abstracts/" as *;
 
 .heading-1 {
+  max-inline-size: 24ch;
+
   color: var(--text-color);
   font-weight: $heading-font-weight;
-  font-size: 26px;
+  font-size: clamp(1.5rem, calc(-0.17rem + 7.14vw), 6.25rem);
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   letter-spacing: inherit;
-  text-transform: uppercase;
-
-  @include mq(large) {
-    font-size: 80px;
-  }
 }
 
 .heading-2 {

@@ -1,13 +1,13 @@
 @use "../abstracts/" as *;
 
 .header {
-  block-size: rem(60);
-
   position: absolute;
-  inset-block-start: 0;
-  inset-inline: 0;
+  z-index: 10;
 
   background-color: hsla(0deg 0% 33% / 50%);
+  block-size: rem(60);
+  inset-block-start: 0;
+  inset-inline: 0;
 
   @include mq(medium) {
     .container {

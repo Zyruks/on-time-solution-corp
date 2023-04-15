@@ -1,1 +1,25 @@
 @use "../abstracts/" as *;
+
+.anime-fade-in {
+  animation: anime-fade-in 400ms ease-in-out forwards;
+}
+
+@keyframes anime-fade-in {
+  0% {
+    transform: translateY(rem(30));
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(rem(0));
+    opacity: 1;
+  }
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 500ms;
+}

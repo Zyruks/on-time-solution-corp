@@ -6,12 +6,12 @@
 
   display: none;
 
-  color: $color-primary-400;
+  color: $color-neutral-100;
   font-weight: $font-weight-bold;
   font-size: $font-size-800;
   line-height: 1;
 
-  background-color: $color-neutral-100;
+  background-color: $color-primary-400;
 
   transition: transform 500ms ease-in-out;
 
@@ -67,15 +67,15 @@
 }
 
 .nav-item {
-  padding-inline: 1rem;
+  color: var(--active-color);
 
   transition: color 250ms ease-in-out;
+  padding-inline: 1rem;
 
-  --active-color: #{$color-primary-400};
+  --active-color: #{$color-neutral-100};
 
   &:hover {
-    --active-color: #{$color-primary-100};
-    color: $color-primary-100;
+    --active-color: #{$color-primary-900};
   }
 
   @include mq(medium) {

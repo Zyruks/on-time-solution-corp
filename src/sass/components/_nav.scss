@@ -1,0 +1,111 @@
+@use "../abstracts/" as *;
+
+.nav {
+  position: absolute;
+  block-size: 100vh;
+
+  display: none;
+
+  color: $color-primary-400;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-800;
+  line-height: 1;
+
+  background-color: $color-neutral-100;
+
+  transition: transform 500ms ease-in-out;
+
+  inset-inline: 0;
+  inset-block-start: rem(60);
+  inset-block-end: 0;
+
+  @include mq(medium) {
+    position: static;
+    block-size: 100%;
+
+    display: block;
+
+    color: $color-neutral-100;
+
+    font-size: 1rem;
+
+    background-color: transparent;
+    padding-block-start: 0;
+  }
+
+  &[aria-hidden="false"] {
+    transform: translateX(0);
+
+    @include mq(medium) {
+      transform: none;
+    }
+  }
+
+  &[aria-hidden="true"] {
+    transform: translateX(-100%);
+
+    @include mq(medium) {
+      transform: none;
+    }
+  }
+
+  ul {
+    --flow-spacer: #{rem(36)};
+    padding-block-start: rem(30);
+
+    @include mq(medium) {
+      display: flex;
+      gap: rem(36);
+      align-items: center;
+      justify-content: space-evenly;
+      block-size: 100%;
+      padding-block-start: 0;
+
+      --flow-spacer: 0;
+    }
+  }
+}
+
+.nav-item {
+  padding-inline: 1rem;
+
+  transition: color 250ms ease-in-out;
+
+  --active-color: #{$color-primary-400};
+
+  &:hover {
+    --active-color: #{$color-primary-100};
+    color: $color-primary-100;
+  }
+
+  @include mq(medium) {
+    padding-inline: 0;
+
+    &:hover {
+      color: $color-primary-400;
+    }
+  }
+
+  &[data-status="active"]::after {
+    display: block;
+
+    background-color: var(--active-color);
+
+    transition: background-color 250ms ease-in-out;
+
+    content: "";
+    inline-size: 100%;
+    block-size: rem(4);
+    inset-block-end: 0;
+
+    @include mq(medium) {
+      display: none;
+    }
+  }
+}
+
+.social-container {
+  @include mq(medium) {
+    display: none;
+  }
+}

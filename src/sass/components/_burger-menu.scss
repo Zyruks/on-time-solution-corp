@@ -1,0 +1,74 @@
+@use "../abstracts/" as *;
+
+.hamburger-menu {
+  position: relative;
+
+  display: block;
+
+  transform: scale(0.8);
+  cursor: pointer;
+
+  user-select: none;
+  inline-size: rem(64);
+  block-size: rem(64);
+
+  -webkit-touch-callout: none;
+
+  @include mq(medium) {
+    display: none;
+  }
+}
+
+.line {
+  --line-color: #{$color-neutral-100};
+  position: absolute;
+
+  display: block;
+
+  border-radius: 2px;
+
+  background: var(--line-color);
+  transform: rotate(0deg);
+  transform-origin: rem(34) rem(2);
+
+  transition: transform 500ms cubic-bezier(0.8, -1.1, 0.5, 1.9);
+
+  stroke: var(--line-color);
+  inline-size: rem(36);
+  block-size: rem(4);
+  stroke-linecap: round;
+}
+
+.top-line {
+  inset-block-start: rem(19);
+  inset-inline-start: rem(14);
+}
+
+.bottom-line {
+  inset-block-start: rem(41);
+  inset-inline-start: rem(14);
+}
+
+.middle-line {
+  stroke-dasharray: 1 100 32 300;
+  stroke-dashoffset: 101;
+
+  transition: stroke-dasharray 750ms ease, stroke-dashoffset 750ms ease;
+}
+
+.hamburger-menu[aria-expanded="true"] {
+  border-radius: rem(32);
+}
+
+.hamburger-menu[aria-expanded="true"] .middle-line {
+  stroke-dasharray: 1 100 190 300;
+  stroke-dashoffset: 1;
+}
+
+.hamburger-menu[aria-expanded="true"] .top-line {
+  transform: translateX(rem(-4.5)) rotate(-45deg);
+}
+
+.hamburger-menu[aria-expanded="true"] .bottom-line {
+  transform: translateX(rem(-4.5)) rotate(45deg);
+}

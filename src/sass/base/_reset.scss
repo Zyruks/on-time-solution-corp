@@ -48,6 +48,7 @@ body {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -65,10 +66,10 @@ svg {
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
+:where(input),
 :where(button),
-textarea,
-select {
+:where(textarea),
+:where(select) {
   font: inherit;
 }
 

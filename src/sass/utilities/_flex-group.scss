@@ -12,6 +12,11 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  &[data-flex-position="center"] {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .flex-group.mx-auto {

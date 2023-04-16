@@ -8,14 +8,31 @@
   font-weight: $font-weight-bold;
 
   background-color: $color-primary-400;
-  padding-block: $size-4;
-  padding-inline: $size-10;
+  cursor: pointer;
 
   transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+  padding-block: $size-4;
+  padding-inline: $size-10;
 
   &:hover {
     color: $color-primary-400;
 
     background-color: $color-neutral-100;
+  }
+}
+
+.btn[data-state="secondary"] {
+  border: rem(1) solid $color-primary-400;
+
+  color: $color-primary-400;
+
+  background-color: $color-neutral-100;
+
+  &:hover {
+    border: rem(1) solid $color-neutral-100;
+
+    color: $color-neutral-100;
+
+    background-color: $color-primary-400;
   }
 }

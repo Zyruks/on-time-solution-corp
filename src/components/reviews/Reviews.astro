@@ -1,0 +1,21 @@
+---
+const { description, profileName, imageLink } = Astro.props
+---
+
+<div class='review'>
+  <div class='star-container flex-group'>
+    <img src='/assets/svg/star.svg' alt='star-illustration' />
+    <img src='/assets/svg/star.svg' alt='star-illustration' />
+    <img src='/assets/svg/star.svg' alt='star-illustration' />
+    <img src='/assets/svg/star.svg' alt='star-illustration' />
+    <img src='/assets/svg/star.svg' alt='star-illustration' />
+  </div>
+  <p>
+    {description}
+  </p>
+
+  <div class='profile flex-group'>
+    <img src={imageLink} alt='' />
+    <span class='fw-bold'>{profileName}</span>
+  </div>
+</div>

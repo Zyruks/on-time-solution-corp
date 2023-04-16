@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .container {
+  display: grid;
+  gap: 2rem;
+}
+
+.divider {
+  inline-size: 100%;
+  block-size: rem(1);
+
+  background-color: $color-neutral-100;
+}
+
+.footer {
+  a {
+    text-decoration: underline;
+    text-decoration-color: $color-primary-400;
+
+    transition: color 300ms ease-in-out, text-decoration 300ms ease-in-out;
+  }
+
+  a:hover {
+    color: $color-primary-100;
+    text-decoration: underline;
+  }
+
+  nav {
+    li {
+      white-space: nowrap;
+
+      inline-size: 100%;
+    }
+  }
+}

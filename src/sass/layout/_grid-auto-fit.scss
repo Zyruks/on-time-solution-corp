@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .grid-auto-fit {
-  --min-item-width: #{rem(250)};
+  --min-item-width: #{rem(300)};
   display: grid;
 
   grid-template-columns:

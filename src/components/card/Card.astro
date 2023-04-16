@@ -1,0 +1,16 @@
+---
+type Props = {
+  title?: string
+  subTitle: string
+  description: string
+  img?: string
+}
+
+const { title, subTitle, description, img }: Props = Astro.props
+---
+
+<div class='card flex-group'>
+  {img ? <img src={img} width='15%' alt='' /> : <h3 class='heading-3'>{title}</h3>}
+  <span class='fw-bold'>{subTitle}</span>
+  <p>{description}</p>
+</div>

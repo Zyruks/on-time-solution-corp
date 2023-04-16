@@ -1,0 +1,9 @@
+---
+const { sectionClass, containerClass } = Astro.props
+---
+
+<section class={sectionClass}>
+  <div class={`container ${containerClass}`}>
+    <slot />
+  </div>
+</section>

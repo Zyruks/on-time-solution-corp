@@ -11,10 +11,8 @@
 }
 
 .heading-2 {
-  color: $color-primary-400;
   font-weight: $font-weight-bold;
   font-size: clamp(1.5rem, calc(-0.17rem + 7.14vw), 5.7rem);
-  text-align: center;
 }
 
 .heading-3 {

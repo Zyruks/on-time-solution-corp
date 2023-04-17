@@ -1,13 +1,22 @@
 ---
 import { getCollection } from "astro:content"
 const services = await getCollection("services")
+import { Picture } from "@astrojs/image/components"
 ---
 
 <div class='images-container'>
   {
     services.map((service) => (
       <div class='image' data-status={service.data.dataState} data-item={service.data.dataItem}>
-        <img class='service-img' src={service.data.image} />
+        <Picture
+          src={service.data.image}
+          format={("avif", "webp", "jpeg")}
+          quality={100}
+          widths={[400, 600, 800]}
+          aspectRatio='16:9'
+          alt='something for now'
+        />
+
         <h3>{service.data.name}</h3>
         <p>{service.data.description}</p>
       </div>

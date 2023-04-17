@@ -23,3 +23,35 @@
 .delay-400 {
   animation-delay: 500ms;
 }
+
+.anime-fade-in-image {
+  animation: anime-fade-in-image 350ms ease-in-out forwards;
+}
+
+@keyframes anime-fade-in-image {
+  0% {
+    transform: translateY(rem(100));
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(rem(0));
+    opacity: 100;
+  }
+}
+
+.anime-fade-out-image {
+  animation: anime-fade-out-image 350ms ease-in-out forwards;
+}
+
+@keyframes anime-fade-out-image {
+  0% {
+    transform: translateY(rem(0));
+    opacity: 100;
+  }
+
+  100% {
+    transform: translateY(rem(100));
+    opacity: 0;
+  }
+}

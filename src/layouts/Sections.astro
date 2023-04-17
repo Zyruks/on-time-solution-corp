@@ -2,7 +2,7 @@
 const { sectionClass, containerClass } = Astro.props
 ---
 
-<section class={sectionClass}>
+<section class={`${sectionClass}  padding-block-10`}>
   <div class={`container ${containerClass}`}>
     <slot />
   </div>

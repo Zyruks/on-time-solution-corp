@@ -1,0 +1,57 @@
+@use "../abstracts/" as *;
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+  inline-size: 100%;
+
+  overflow-x: scroll;
+  scroll-snap-type: proximity;
+  scroll-padding: 0 1rem;
+  scroll-snap-align: start;
+  scrollbar-width: none; /* hide the scrollbar */
+
+  @include mq(medium) {
+    flex-direction: column;
+    max-inline-size: 20rem;
+    max-block-size: 60%;
+
+    overflow-y: scroll;
+  }
+}
+
+/* Firefox-only styling for scrollbar */
+.button-row::-webkit-scrollbar {
+  inline-size: 0;
+
+  background: transparent;
+}
+
+.button-item {
+  min-inline-size: fit-content;
+
+  border: none;
+  border-radius: 5px;
+
+  color: hsl(221deg 13% 46%);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  word-wrap: nowrap;
+
+  background-color: hsl(240deg 6% 90%);
+  cursor: pointer;
+
+  padding-block: 0.8rem;
+  padding-inline: 1.2rem;
+
+  @include mq(medium) {
+    padding-block: 2rem;
+  }
+}
+
+.button-item[data-status="active"] {
+  color: hsl(221deg 83% 53%);
+
+  background-color: hsl(220deg 84% 90%);
+}

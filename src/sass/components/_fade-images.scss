@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+.images-container {
+  display: grid;
+
+  h3 {
+    color: $color-primary-400;
+    font-weight: 700;
+    font-size: clamp(1.5rem, calc(1.2rem + 1.28vw), 2rem);
+
+    font-style: normal;
+  }
+
+  p {
+    max-inline-size: 70ch;
+
+    color: hsl(221deg 13% 46%);
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.image {
+  display: none;
+  grid-row: 1;
+  grid-column: 1;
+
+  inline-size: 100%;
+
+  &[data-status="active"] {
+    display: block;
+  }
+}
+
+.service-img {
+  border-radius: rem(2);
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  max-block-size: 25rem;
+}

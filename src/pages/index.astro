@@ -5,12 +5,15 @@ import Hero from "@components/hero/Hero.astro"
 import Reviews from "@components/reviews/Reviews.astro"
 import General from "@layouts/General.astro"
 import Sections from "@layouts/Sections.astro"
+import OurServices from "@layouts/sections/Our-services.astro"
 ---
 
 <General>
   <Hero />
   <Brands />
-  <Sections sectionClass='why-choose-us padding-block-10' containerClass=''>
+  <OurServices />
+
+  <Sections sectionClass='why-choose-us' containerClass=''>
     <h2 class='heading-2 txt-primary-400 text-center'>Why Choose Us?</h2>
     <p class='txt-neutral-900 text-center'>
       At On Time Solution Corp, we understand that you have many options when it comes to choosing a
@@ -50,9 +53,7 @@ import Sections from "@layouts/Sections.astro"
       />
     </div>
   </Sections>
-  <Sections
-    sectionClass='contact-us bg-primary-400 padding-block-10'
-    containerClass='grid-auto-fit'>
+  <Sections sectionClass='contact-us bg-primary-400 ' containerClass='grid-auto-fit'>
     <div>
       <h2 class='heading-2 txt-neutral-100'>Contact Us</h2>
       <p class='txt-neutral-100'>
@@ -115,7 +116,7 @@ import Sections from "@layouts/Sections.astro"
       </form>
     </div>
   </Sections>
-  <Sections sectionClass='reviews padding-block-10' containerClass='padding-inline-6'>
+  <Sections sectionClass='reviews ' containerClass='padding-inline-6'>
     <p class='text-center'>180 + people have said how good On Time Solution is</p>
     <h2 class='heading-2 txt-primary-400 text-center'>Our clients say about us</h2>
     <div class='reviews-container grid-auto-fit'>

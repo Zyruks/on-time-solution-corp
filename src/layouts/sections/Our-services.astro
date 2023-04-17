@@ -2,15 +2,15 @@
 import ButtonScroll from "@components/button-scroll/Button-scroll.astro"
 import Sections from "@layouts/Sections.astro"
 import FadeImages from "@components/images/FadeImages.astro"
+import SectionHeader from "@components/section-header/Section-header.astro"
 ---
 
-<Sections sectionClass='our-services'>
-  <h2 class='heading-2 txt-primary-400 text-center'>Our Services</h2>
-  <p class='txt-neutral-900 text-center'>
-    We offer a wide range of plumbing services to meet your needs, from basic repairs to full
-    installations. Our experienced technicians are committed to providing high-quality service with
-    upfront pricing and exceptional customer service.
-  </p>
+<Sections id='our-services' sectionClass='our-services'>
+  <SectionHeader
+    title='Our Services'
+    description='We offer a wide range of plumbing services to meet your needs, from basic repairs to full installations. Our experienced technicians are committed to providing high-quality service with upfront pricing and exceptional customer service.'
+  />
+
   <div class='content-container margin-block-start-8'>
     <ButtonScroll />
     <FadeImages />
@@ -20,9 +20,6 @@ import FadeImages from "@components/images/FadeImages.astro"
 <style>
   .content-container {
     block-size: 100%;
-    max-block-size: 35rem;
-  }
-  div {
     display: grid;
     width: 100%;
     overflow: hidden;
@@ -30,7 +27,7 @@ import FadeImages from "@components/images/FadeImages.astro"
   }
 
   @media (min-width: 42em) {
-    div {
+    .content-container {
       grid-template-columns: 1fr 1.5fr;
       justify-items: center;
       justify-content: center;

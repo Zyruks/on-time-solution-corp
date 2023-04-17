@@ -1,0 +1,45 @@
+---
+import Card from "@components/card/Card.astro"
+import SectionHeader from "@components/section-header/Section-header.astro"
+import Sections from "@layouts/Sections.astro"
+---
+
+<Sections id='why-choose-us' sectionClass='why-choose-us' containerClass=''>
+  <SectionHeader
+    title='Why Choose Us?'
+    description='At On Time Solution Corp, we understand that you have many options when it comes to choosing a plumbing company. Here are just a few reasons why we believe we stand out from the competition'
+  />
+
+  <div class='card-container grid-auto-fit margin-block-start-8'>
+    <Card
+      title='25+'
+      subTitle='Years of Experience'
+      description='With over 25 years of experience in the plumbing industry, we have the knowledge and expertise to handle any plumbing issue.'
+    />
+    <Card
+      img={"/assets/svg/check.svg"}
+      subTitle='Customer Satisfaction'
+      description='We know that plumbing emergencies can happen at any time, which is why we offer 24/7 emergency service to our customers.'
+    />
+    <Card
+      title='Upfront Pricing'
+      subTitle='Transparent and Honest Pricing'
+      description='We believe in providing upfront pricing to our customers, so there are no surprises or hidden fees.'
+    />
+    <Card
+      title='Professionalism'
+      subTitle='Committed to Customer Satisfaction'
+      description='We take pride in our professionalism and commitment to customer service. From arriving on time to treating your home with respect, we go above and beyond to ensure your satisfaction.'
+    />
+    <Card
+      title='Licensed'
+      subTitle='Professional & Reliable'
+      description="We're committed to ensuring our customers are completely satisfied with our work. If for any reason you're not happy with our service, we'll make it right."
+    />
+    <Card
+      title='What We Offer'
+      subTitle='Comprehensive Services'
+      description='From leak detection to full home inspections, we offer a wide range of plumbing services to meet all of your needs. No matter the job, we have the expertise to get it done right.'
+    />
+  </div>
+</Sections>

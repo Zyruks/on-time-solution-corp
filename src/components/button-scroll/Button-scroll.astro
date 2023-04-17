@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content"
+const services = await getCollection("services")
+---
+
+<div class='button-row'>
+  {
+    services.map((service) => (
+      <button
+        class='button-item'
+        data-item={service.data.dataItem}
+        data-status={service.data.dataState}>
+        {service.data.name}
+      </button>
+    ))
+  }
+</div>
+
+<script>
+  let buttonRow = document.querySelector(".button-row") as HTMLDivElement
+
+  const buttonItems: NodeListOf<HTMLButtonElement> = document.querySelectorAll(".button-item")
+
+  let isDown = false
+  let startX: number = 0
+  let startY: number = 0
+  let scrollLeft: number
+  let scrollTop: number
+
+  buttonRow.addEventListener("mousedown", (e: MouseEvent) => {
+    isDown = true
+    startX = e.pageX - buttonRow.offsetLeft
+    startY = e.pageY - buttonRow.offsetTop
+    scrollLeft = buttonRow.scrollLeft
+    scrollTop = buttonRow.scrollTop
+  })
+
+  buttonRow.addEventListener("mouseleave", () => {
+    isDown = false
+  })
+
+  buttonRow.addEventListener("mouseup", () => {
+    isDown = false
+  })
+
+  buttonRow.addEventListener("mousemove", (e) => {
+    if (!isDown) return
+    e.preventDefault()
+    const x = e.pageX - buttonRow.offsetLeft
+    const y = e.pageY - buttonRow.offsetTop
+    const walkX = (x - startX) * 1 // Adjust the speed of the drag
+    const walkY = (y - startY) * 1 // Adjust the speed of the drag
+    buttonRow.scrollLeft = scrollLeft - walkX
+    buttonRow.scrollTop = scrollTop - walkY
+  })
+
+  buttonItems.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttonItems.forEach((otherButton) => {
+        if (otherButton !== button) {
+          otherButton.setAttribute("data-status", "inactive")
+        }
+      })
+      button.setAttribute("data-status", "active")
+    })
+  })
+</script>

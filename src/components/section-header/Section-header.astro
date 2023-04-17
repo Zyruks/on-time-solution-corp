@@ -1,0 +1,29 @@
+---
+type Props = {
+  title: string
+  description: string
+  titleClass?: string
+  descriptionClass?: string
+}
+
+const {
+  title,
+  description,
+  titleClass = "txt-primary-400",
+  descriptionClass = "txt-neutral-900",
+}: Props = Astro.props
+---
+
+<div class='section-header flow margin-block-10'>
+  <h2 class={`heading-2 text-center  ${titleClass}`}>{title}</h2>
+  <p class={`description text-center ${descriptionClass}`}>
+    {description}
+  </p>
+</div>
+
+<style>
+  .description {
+    max-inline-size: 70ch;
+    margin-inline: auto;
+  }
+</style>

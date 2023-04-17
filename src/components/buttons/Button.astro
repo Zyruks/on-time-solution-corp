@@ -1,3 +1,10 @@
-<button class='btn anime-fade-in delay-400'>
+---
+type Props = {
+  link: string
+}
+const { link }: Props = Astro.props
+---
+
+<a class='btn anime-fade-in delay-400' href={link}>
   <slot />
-</button>
+</a>

@@ -1,0 +1,40 @@
+---
+import ButtonScroll from "@components/button-scroll/Button-scroll.astro"
+import Sections from "@layouts/Sections.astro"
+import FadeImages from "@components/images/FadeImages.astro"
+---
+
+<Sections sectionClass='our-services'>
+  <h2 class='heading-2 txt-primary-400 text-center'>Our Services</h2>
+  <p class='txt-neutral-900 text-center'>
+    We offer a wide range of plumbing services to meet your needs, from basic repairs to full
+    installations. Our experienced technicians are committed to providing high-quality service with
+    upfront pricing and exceptional customer service.
+  </p>
+  <div class='content-container margin-block-start-8'>
+    <ButtonScroll />
+    <FadeImages />
+  </div>
+</Sections>
+
+<style>
+  .content-container {
+    block-size: 100%;
+    max-block-size: 35rem;
+  }
+  div {
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+    gap: 3rem;
+  }
+
+  @media (min-width: 42em) {
+    div {
+      grid-template-columns: 1fr 1.5fr;
+      justify-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+</style>

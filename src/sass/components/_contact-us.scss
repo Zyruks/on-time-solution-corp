@@ -1,6 +1,0 @@
-@use "../abstracts/" as *;
-
-.contact-us .grid-auto-fit {
-  --min-item-width: #{rem(180)};
-  --grid-gap-row: #{rem(40)};
-}

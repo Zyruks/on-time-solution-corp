@@ -14,7 +14,7 @@
   @include mq(medium) {
     flex-direction: column;
     max-inline-size: 20rem;
-    max-block-size: 60%;
+    max-block-size: rem(500);
 
     overflow-y: scroll;
   }

@@ -1,0 +1,45 @@
+---
+import Sections from "@layouts/Sections.astro"
+import Reviews from "@components/reviews/Reviews.astro"
+import SectionHeader from "@components/section-header/Section-header.astro"
+---
+
+<Sections id='reviews' sectionClass='reviews ' containerClass='padding-inline-6'>
+  <SectionHeader
+    title='Our clients say about us'
+    description='180 + people have said how good On Time Solution is'
+  />
+
+  <div class='reviews-container grid-auto-fit'>
+    <Reviews
+      description={`"I've used On Time Solution Corp for multiple plumbing projects over the years and they've never let me down. Their team is always friendly, professional, and goes above and beyond to ensure customer satisfaction. “`}
+      profileName='Louis Garrison'
+      imageLink='/assets/images/profile-6.png'
+    />
+    <Reviews
+      description={`"On Time Solution Corp is the best plumbing company I've ever worked with. They were professional, knowledgeable, and got the job done quickly. I highly recommend them to anyone in need of plumbing services."`}
+      profileName='Stefan Fermin'
+      imageLink='/assets/images/profile-1.png'
+    />
+    <Reviews
+      description={`“I had an emergency plumbing issue in the middle of the night and On Time Solution Corp was there to save the day. They arrived promptly and fixed the problem quickly. I couldn't have asked for better service."`}
+      profileName='John Johnson'
+      imageLink='/assets/images/profile-2.png'
+    />
+    <Reviews
+      description={`"I recently had a leak in my kitchen sink and On Time Solution Corp was able to fix it quickly and efficiently. They were professional and courteous throughout the entire process"`}
+      profileName='Mike Thompson'
+      imageLink='/assets/images/profile-3.png'
+    />
+    <Reviews
+      description={`"I've used On Time Solution Corp for multiple plumbing projects over the years and they've never let me down. Their team is always friendly, professional, and goes above and beyond to ensure customer satisfaction. “`}
+      profileName='Lisa Chen'
+      imageLink='/assets/images/profile-5.png'
+    />
+    <Reviews
+      description={`“They were able to complete the project on time and within budget, and the quality of their work was top-notch. I would highly recommend them to anyone in need of plumbing services." `}
+      profileName='David Lee'
+      imageLink='/assets/images/profile-4.png'
+    />
+  </div>
+</Sections>

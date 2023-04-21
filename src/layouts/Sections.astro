@@ -1,8 +1,14 @@
 ---
-const { sectionClass, containerClass } = Astro.props
+type Props = {
+  sectionClass: string
+  containerClass?: string
+  id: string
+}
+
+const { sectionClass, containerClass, id }: Props = Astro.props
 ---
 
-<section class={`${sectionClass}  padding-block-10`}>
+<section id={id} class={`${sectionClass}  padding-block-10`}>
   <div class={`container ${containerClass}`}>
     <slot />
   </div>

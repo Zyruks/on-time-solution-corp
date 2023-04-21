@@ -4,18 +4,13 @@
   position: relative;
 
   overflow: hidden;
-  padding-block-start: rem(80);
-  block-size: 90vh;
+  padding-block: rem(120);
 
   .container {
     flex-direction: column;
 
     gap: rem(30);
     margin-block-start: $size-10;
-
-    @include mq(medium) {
-      margin-block-start: 6rem;
-    }
   }
 
   h1,

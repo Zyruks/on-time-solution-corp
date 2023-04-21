@@ -1,155 +1,18 @@
 ---
-import Brands from "@components/brands/Brands.astro"
-import Card from "@components/card/Card.astro"
 import Hero from "@components/hero/Hero.astro"
-import Reviews from "@components/reviews/Reviews.astro"
+import Reviews from "@layouts/sections/Reviews.astro"
 import General from "@layouts/General.astro"
-import Sections from "@layouts/Sections.astro"
+import ContactUs from "@layouts/sections/Contact-us.astro"
 import OurServices from "@layouts/sections/Our-services.astro"
+import WhyChooseUs from "@layouts/sections/Why-choose-us.astro"
+import SectionBrand from "@layouts/sections/Section-brand.astro"
 ---
 
 <General>
   <Hero />
-  <Brands />
+  <SectionBrand />
   <OurServices />
-
-  <Sections sectionClass='why-choose-us' containerClass=''>
-    <h2 class='heading-2 txt-primary-400 text-center'>Why Choose Us?</h2>
-    <p class='txt-neutral-900 text-center'>
-      At On Time Solution Corp, we understand that you have many options when it comes to choosing a
-      plumbing company. Here are just a few reasons why we believe we stand out from the competition
-    </p>
-
-    <div class='card-container grid-auto-fit margin-block-start-8'>
-      <Card
-        title='25+'
-        subTitle='Years of Experience'
-        description='With over 25 years of experience in the plumbing industry, we have the knowledge and expertise to handle any plumbing issue.'
-      />
-      <Card
-        img={"/assets/svg/check.svg"}
-        subTitle='Customer Satisfaction'
-        description='We know that plumbing emergencies can happen at any time, which is why we offer 24/7 emergency service to our customers.'
-      />
-      <Card
-        title='Upfront Pricing'
-        subTitle='Transparent and Honest Pricing'
-        description='We believe in providing upfront pricing to our customers, so there are no surprises or hidden fees.'
-      />
-      <Card
-        title='Professionalism'
-        subTitle='Committed to Customer Satisfaction'
-        description='We take pride in our professionalism and commitment to customer service. From arriving on time to treating your home with respect, we go above and beyond to ensure your satisfaction.'
-      />
-      <Card
-        title='Licensed'
-        subTitle='Professional & Reliable'
-        description="We're committed to ensuring our customers are completely satisfied with our work. If for any reason you're not happy with our service, we'll make it right."
-      />
-      <Card
-        title='What We Offer'
-        subTitle='Comprehensive Services'
-        description='From leak detection to full home inspections, we offer a wide range of plumbing services to meet all of your needs. No matter the job, we have the expertise to get it done right.'
-      />
-    </div>
-  </Sections>
-  <Sections sectionClass='contact-us bg-primary-400 ' containerClass='grid-auto-fit'>
-    <div>
-      <h2 class='heading-2 txt-neutral-100'>Contact Us</h2>
-      <p class='txt-neutral-100'>
-        Whether you have a question about our services or need to schedule an appointment, our team
-        is always here to help. Simply give us a call, send us an email, or fill out the form below
-        and we'll get back to you as soon as possible. We look forward to hearing from you!
-      </p>
-      <div class='grid-auto-fit txt-neutral-100 margin-block-start-8'>
-        <div>
-          <h4 class='fw-regular uppercase'>Office Hours</h4>
-          <p class='fw-bold margin-block-start-4'>MONDAY-FRIDAY</p>
-          <span class='fw-bold'>9:00 am to 5:00 pm</span>
-        </div>
-        <div>
-          <h4 class='fw-regular uppercase'>OUR ADDRESS</h4>
-          <a
-            href='https://www.google.com/maps/place/3250+Perry+Ave,+Bronx,+NY+10467,+USA/@40.8757741,-73.8787419,17z/data=!3m1!4b1!4m6!3m5!1s0x89c2f36d76e9e3df:0x36a7520e12169e05!8m2!3d40.8757741!4d-73.8761616!16s%2Fg%2F11j8n13s8l'
-            target='_blank'
-            class='dp-block fw-bold margin-block-start-4'>3250 Perry Ave Bronx New York, NY 10467</a
-          >
-        </div>
-        <div>
-          <h4 class='fw-regular uppercase'>CALL US!</h4>
-          <a href='tel:+1-347-202-9185' class='dp-block fw-bold margin-block-start-4'
-            >+1-347-202-9185</a
-          >
-          <a href='tel:+1-347-202-3427' class='fw-bold'>+1-347-202-3427</a>
-        </div>
-        <div>
-          <h4 class='fw-regular uppercase'>Email</h4>
-          <a href='mailto:ontimesolution@gmail.com' class='dp-block fw-bold margin-block-start-4'
-            >ontimesolution@gmail.com</a
-          >
-          <a href='mailto:nelsoncabrera@yahoo.com' class='fw-bold'>nelsoncabrera@yahoo.com</a>
-        </div>
-      </div>
-    </div>
-    <div class='form-container'>
-      <h3 class='txt-neutral-100 fs-800'>Get in Touch</h3>
-
-      <form action='#' method='POST' class='form flow'>
-        <div>
-          <label for='name'>Your name:</label>
-          <input type='text' id='name' name='name' required />
-        </div>
-
-        <div>
-          <label for='email'>Email address:</label>
-          <input type='email' id='email' name='email' required />
-        </div>
-
-        <div>
-          <label for='message'>Write your message:</label>
-          <textarea id='message' name='message' required></textarea>
-        </div>
-
-        <button class='btn margin-block-start-10' data-state='secondary' type='submit'
-          >Submit</button
-        >
-      </form>
-    </div>
-  </Sections>
-  <Sections sectionClass='reviews ' containerClass='padding-inline-6'>
-    <p class='text-center'>180 + people have said how good On Time Solution is</p>
-    <h2 class='heading-2 txt-primary-400 text-center'>Our clients say about us</h2>
-    <div class='reviews-container grid-auto-fit'>
-      <Reviews
-        description={`"I've used On Time Solution Corp for multiple plumbing projects over the years and they've never let me down. Their team is always friendly, professional, and goes above and beyond to ensure customer satisfaction. “`}
-        profileName='Louis Garrison'
-        imageLink='/assets/images/profile-6.png'
-      />
-      <Reviews
-        description={`"On Time Solution Corp is the best plumbing company I've ever worked with. They were professional, knowledgeable, and got the job done quickly. I highly recommend them to anyone in need of plumbing services."`}
-        profileName='Stefan Fermin'
-        imageLink='/assets/images/profile-1.png'
-      />
-      <Reviews
-        description={`“I had an emergency plumbing issue in the middle of the night and On Time Solution Corp was there to save the day. They arrived promptly and fixed the problem quickly. I couldn't have asked for better service."`}
-        profileName='John Johnson'
-        imageLink='/assets/images/profile-2.png'
-      />
-      <Reviews
-        description={`"I recently had a leak in my kitchen sink and On Time Solution Corp was able to fix it quickly and efficiently. They were professional and courteous throughout the entire process"`}
-        profileName='Mike Thompson'
-        imageLink='/assets/images/profile-3.png'
-      />
-      <Reviews
-        description={`"I've used On Time Solution Corp for multiple plumbing projects over the years and they've never let me down. Their team is always friendly, professional, and goes above and beyond to ensure customer satisfaction. “`}
-        profileName='Lisa Chen'
-        imageLink='/assets/images/profile-5.png'
-      />
-      <Reviews
-        description={`“They were able to complete the project on time and within budget, and the quality of their work was top-notch. I would highly recommend them to anyone in need of plumbing services." `}
-        profileName='David Lee'
-        imageLink='/assets/images/profile-4.png'
-      />
-    </div>
-  </Sections>
+  <WhyChooseUs />
+  <ContactUs />
+  <Reviews />
 </General>

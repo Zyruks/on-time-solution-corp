@@ -6,6 +6,7 @@ $_clr-neutral-400: hsl(221deg 13% 46%);
 $_clr-neutral-900: hsl(220deg 19% 13%);
 $_clr-blue-100: hsl(220deg 84% 90%);
 $_clr-blue-400: hsl(221deg 83% 53%);
+$_clr-blue-500: hsl(221deg 83% 43%);
 $_clr-blue-900: hsl(221deg 83% 33%);
 $colors: (
   "neutral": (
@@ -18,6 +19,7 @@ $colors: (
   "primary": (
     100: $_clr-blue-100,
     400: $_clr-blue-400,
+    500: $_clr-blue-500,
     900: $_clr-blue-900,
   )
 );

@@ -1,13 +1,7 @@
 @use "../abstracts/" as *;
 
 .reviews {
-  h2 {
-    line-height: 1;
-    margin-block-end: 4rem;
-  }
-
   p {
-    color: $color-neutral-400;
     font-size: clamp(1rem, calc(0.91rem + 0.38vw), 1.25rem);
   }
 }

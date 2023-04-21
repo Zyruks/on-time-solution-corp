@@ -1,10 +1,24 @@
-<section class='brand padding-block-10'>
-  <div class='container grid-auto-fit mx-auto'>
-    <img src='/assets/svg/wm-logo.svg' alt='' />
-    <img src='/assets/svg/navien-logo.svg' alt='' />
-    <img src='/assets/svg/kohler.svg' alt='' />
-    <img src='/assets/svg/delta-logo.svg' alt='' />
-    <img src='/assets/svg/american-standard-logo.svg' alt='' />
-  </div>
-</section>
+<img src='/assets/svg/wm-logo.svg' alt='' />
+<img src='/assets/svg/navien-logo.svg' alt='' />
+<img src='/assets/svg/kohler.svg' alt='' />
+<img src='/assets/svg/delta-logo.svg' alt='' />
+<img src='/assets/svg/american-standard-logo.svg' alt='' />
+
 <!--  this component should be other type more like a layout -->
+<style lang='scss' is:global>
+  @use "../../sass/abstracts/" as *;
+
+  .brands .brands-container {
+    --min-item-width: #{rem(120)};
+
+    align-items: center;
+
+    @include mq(medium) {
+      --min-item-width: #{rem(200)};
+    }
+
+    @include mq(large) {
+      --min-item-width: #{rem(150)};
+    }
+  }
+</style>

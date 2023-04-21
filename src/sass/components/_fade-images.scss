@@ -1,12 +1,10 @@
 @use "../abstracts/" as *;
 
 .images-container {
-  display: grid;
-
   h3 {
     color: $color-primary-400;
     font-weight: 700;
-    font-size: clamp(1.5rem, calc(1.2rem + 1.28vw), 2rem);
+    font-size: rem(18);
 
     font-style: normal;
   }
@@ -33,8 +31,10 @@
 }
 
 .service-img {
-  border-radius: rem(2);
+  min-inline-size: 100%;
+
+  border-radius: rem(6);
   inline-size: 100%;
-  aspect-ratio: 16 / 9;
+
   max-block-size: 25rem;
 }

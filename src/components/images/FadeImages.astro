@@ -13,11 +13,13 @@ import { Picture } from "@astrojs/image/components"
           format={("avif", "webp", "jpeg")}
           quality={100}
           widths={[400, 600, 800]}
-          aspectRatio='16:9'
+          aspectRatio='1:1'
           alt='something for now'
+          sizes='(max-width: 800px) 100vw, 800px'
+          class='service-img'
         />
 
-        <h3>{service.data.name}</h3>
+        <h3 class='margin-block-start-6'>{service.data.name}</h3>
         <p>{service.data.description}</p>
       </div>
     ))

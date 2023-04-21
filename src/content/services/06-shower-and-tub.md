@@ -6,4 +6,5 @@ description: "Our shower and tub installation services provide a comfortable and
 image: "/assets/images/services/06-showerandbath.jpg"
 dataState: "inactive"
 dataItem: "item-six"
+alt: "New shower or tub being installed"
 ---

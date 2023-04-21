@@ -6,4 +6,5 @@ description: "We offer water softener installation and repair services to improv
 image: "/assets/images/services/04-water-softener.jpeg"
 dataState: "inactive"
 dataItem: "item-four"
+alt: "water softener installation and repair"
 ---

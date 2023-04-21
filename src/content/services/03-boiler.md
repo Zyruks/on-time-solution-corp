@@ -6,4 +6,5 @@ description: "We offer gas and oil boiler installation and repair services to en
 image: "/assets/images/services/03-boiler.jpeg"
 dataState: "inactive"
 dataItem: "item-three"
+alt: "boiler installation and repair"
 ---

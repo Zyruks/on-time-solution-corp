@@ -6,4 +6,5 @@ description: "Our commercial plumbing services provide businesses with reliable 
 image: "/assets/images/services/08-industrial.jpg"
 dataState: "inactive"
 dataItem: "item-eight"
+alt: "Commercial plumbing services"
 ---

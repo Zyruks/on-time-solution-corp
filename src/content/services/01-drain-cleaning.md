@@ -6,4 +6,5 @@ description: "Our drain cleaning services ensure that your pipes are free of clo
 image: "/assets/images/services/01-drain-cleaning.jpg"
 dataState: "active"
 dataItem: "item-one"
+alt: "Professional drain cleaning services"
 ---

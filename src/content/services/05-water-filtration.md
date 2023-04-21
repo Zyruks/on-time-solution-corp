@@ -6,4 +6,5 @@ description: "Our water filtration system services provide clean and safe drinki
 image: "/assets/images/services/05-water filtration.jpeg"
 dataState: "inactive"
 dataItem: "item-five"
+alt: "water filtration"
 ---

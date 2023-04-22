@@ -8,5 +8,5 @@ dataState: "inactive"
 dataItem: "item-five"
 alt: "water filtration"
 imageWidth: "800"
-imageHeight: "571"
+imageHeight: "450"
 ---

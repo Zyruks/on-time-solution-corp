@@ -1,23 +1,37 @@
 ---
 import { getCollection } from "astro:content"
 const services = await getCollection("services")
-import { Picture } from "@astrojs/image/components"
 ---
 
 <div class='images-container'>
   {
     services.map((service) => (
       <div class='image' data-status={service.data.dataState} data-item={service.data.dataItem}>
-        <Picture
-          src={service.data.image}
-          format={("avif", "webp", "jpeg")}
-          quality={100}
-          widths={[400, 600, 800]}
-          aspectRatio='1:1'
-          alt={service.data.alt}
-          sizes='(max-width: 800px) 100vw, 800px'
-          class='service-img'
-        />
+        <picture>
+          <source
+            type='image/avif'
+            srcset={`
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_avif,w_400/v1682118126/on-time-solution/services/${service.data.image}.jpg 400w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_avif,w_600/v1682118126/on-time-solution/services/${service.data.image}.jpg 600w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_avif,w_800/v1682118126/on-time-solution/services/${service.data.image}.jpg 800w
+    `}
+          />
+          <source
+            type='image/webp'
+            srcset={`
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_webp,w_400/v1682118126/on-time-solution/services/${service.data.image}.jpg 400w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_webp,w_600/v1682118126/on-time-solution/services/${service.data.image}.jpg 600w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_webp,w_800/v1682118126/on-time-solution/services/${service.data.image}.jpg 800w
+    `}
+          />
+          <img
+            src={`https://res.cloudinary.com/djrny1bwv/image/upload/w_250/v1682118126/on-time-solution/services/${service.data.image}.jpg`}
+            alt={service.data.alt}
+            class='service-img'
+            width='800'
+            height='400'
+          />
+        </picture>
 
         <h3 class='margin-block-start-6'>{service.data.name}</h3>
         <p>{service.data.description}</p>

@@ -13,6 +13,13 @@ const serviceSchema = defineCollection({
   }),
 })
 
+const workSchema = defineCollection({
+  schema: z.object({
+    images: z.array(z.string()),
+  }),
+})
+
 export const collections = {
   services: serviceSchema,
+  work: workSchema,
 }

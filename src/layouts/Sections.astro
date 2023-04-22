@@ -1,0 +1,15 @@
+---
+type Props = {
+  sectionClass: string
+  containerClass?: string
+  id: string
+}
+
+const { sectionClass, containerClass, id }: Props = Astro.props
+---
+
+<section id={id} class={`${sectionClass}  `}>
+  <div class={`container ${containerClass}`}>
+    <slot />
+  </div>
+</section>

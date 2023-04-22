@@ -3,25 +3,16 @@
 .heading-1 {
   color: var(--text-color);
   font-weight: $heading-font-weight;
-  font-size: 26px;
+  font-size: clamp(1.5rem, calc(-0.17rem + 7.14vw), 6.25rem);
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   letter-spacing: inherit;
-  text-transform: uppercase;
-
-  @include mq(large) {
-    font-size: 80px;
-  }
+  max-inline-size: 24ch;
 }
 
 .heading-2 {
-  color: var(--text-color);
   font-weight: $font-weight-bold;
-  font-size: 34.5px;
-
-  @include mq(large) {
-    font-size: 80px;
-  }
+  font-size: clamp(1.5rem, calc(-0.17rem + 7.14vw), 5.7rem);
 }
 
 .heading-3 {

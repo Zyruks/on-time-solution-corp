@@ -1,0 +1,51 @@
+---
+import Star from "@components/icons/Star.astro"
+
+type Props = {
+  description: string
+  profileName: string
+  imageLink: string
+  altText: string
+}
+
+const { description, profileName, imageLink, altText }: Props = Astro.props
+---
+
+<div class='review'>
+  <div class='star-container flex-group'>
+    <Star />
+    <Star />
+    <Star />
+    <Star />
+    <Star />
+  </div>
+  <p>
+    {description}
+  </p>
+
+  <div class='profile flex-group'>
+    <picture>
+      <source
+        type='image/avif'
+        srcset={`
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_avif/v1682118126/on-time-solution/reviews/${imageLink}.jpg 250w
+    `}
+      />
+      <source
+        type='image/webp'
+        srcset={`
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_webp/v1682118126/on-time-solution/reviews/${imageLink}.jpg 250w,
+    `}
+      />
+      <img
+        src={`https://res.cloudinary.com/djrny1bwv/image/upload/v1682118126/on-time-solution/reviews/${imageLink}.png`}
+        alt={altText}
+        class='work-images'
+        width='47'
+        height='47'
+      />
+    </picture>
+
+    <span class='fw-bold'>{profileName}</span>
+  </div>
+</div>

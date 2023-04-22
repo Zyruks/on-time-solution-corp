@@ -1,0 +1,11 @@
+{
+  "conventionalCommits.scopes": [
+    "Sass",
+    "component",
+    "Layout",
+    "Pages",
+    "config",
+    "assets",
+    "animation"
+  ]
+}

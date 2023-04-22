@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+
+.reviews {
+  p {
+    font-size: clamp(1rem, calc(0.91rem + 0.38vw), 1.25rem);
+  }
+}
+
+.reviews-container {
+  justify-items: center;
+
+  --grid-gap-column: #{rem(40)};
+  --grid-gap-row: #{rem(40)};
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+
+  border: rem(1.5) dashed hsl(220deg 19% 13%);
+  min-block-size: 12rem;
+
+  p {
+    max-inline-size: 45ch;
+
+    font-size: 1rem;
+  }
+}
+
+.profile {
+  align-items: center;
+  margin-block-start: auto;
+}

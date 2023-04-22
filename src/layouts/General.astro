@@ -1,0 +1,40 @@
+---
+import Footer from "@components/footer/Footer.astro"
+import "../sass/main.scss"
+import Header from "@components/header/Header.astro"
+const { nobg } = Astro.props
+import { SEO } from "astro-seo"
+---
+
+<html lang='en'>
+  <head>
+    <SEO
+      title='On Time Solution Corp - Expert Plumbing Services'
+      description='On Time Solution Corp offers expert plumbing services, from repairs to installations. Our experienced plumbers provide upfront pricing, exceptional customer service, and 24/7 emergency services. Contact us today for a top-quality plumbing experience.'
+      charset='utf-8'
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.svg" }],
+      }}
+    />
+
+    <meta
+      name='keywords'
+      content='plumbing, plumbing services, drain cleaning, emergency plumbing, licensed plumbers, upfront pricing, customer satisfaction'
+    />
+    <meta name='author' content='Samuel Llibre Santos | Zyruks' />
+
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>On Time Solution Corp</title>
+  </head>
+  <body>
+    {nobg ? <Header nobg='none' /> : <Header />}
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

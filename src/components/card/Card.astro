@@ -1,0 +1,17 @@
+---
+import Check from "@components/icons/Check.astro"
+
+type Props = {
+  title?: string
+  subTitle: string
+  description: string
+}
+
+const { title, subTitle, description }: Props = Astro.props
+---
+
+<div class='card flex-group'>
+  {title ? <h3 class='heading-3'>{title}</h3> : <Check />}
+  <span class='fw-bold'>{subTitle}</span>
+  <p>{description}</p>
+</div>

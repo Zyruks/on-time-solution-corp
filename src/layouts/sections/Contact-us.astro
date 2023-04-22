@@ -1,0 +1,87 @@
+---
+import Sections from "@layouts/Sections.astro"
+import SectionHeader from "@components/section-header/Section-header.astro"
+---
+
+<Sections
+  id='contact-us'
+  sectionClass='contact-us bg-primary-400 padding-block-10'
+  containerClass='grid-auto-fit'>
+  <div>
+    <SectionHeader
+      title='Contact Us'
+      description=" Whether you have a question about our services or need to schedule an appointment, our team is always here to help. Simply give us a call, send us an email, or fill out the form below and we'll get back to you as soon as possible. We look forward to hearing from you!"
+      titleClass='txt-neutral-100'
+      descriptionClass='txt-neutral-100'
+    />
+    <div class='stats grid-auto-fit txt-neutral-100'>
+      <div class='flow'>
+        <h3 class='fw-regular uppercase'>Office Hours</h3>
+        <p class='fw-bold'>MONDAY-FRIDAY</p>
+        <span class='fw-bold'>9:00 am to 5:00 pm</span>
+      </div>
+      <div>
+        <h4 class='fw-regular uppercase'>OUR ADDRESS</h4>
+        <a
+          href='https://www.google.com/maps/place/3250+Perry+Ave,+Bronx,+NY+10467,+USA/@40.8757741,-73.8787419,17z/data=!3m1!4b1!4m6!3m5!1s0x89c2f36d76e9e3df:0x36a7520e12169e05!8m2!3d40.8757741!4d-73.8761616!16s%2Fg%2F11j8n13s8l'
+          target='_blank'
+          class='dp-block fw-bold margin-block-start-4'
+          >3250 Perry Ave Bronx New York, <br /> NY 10467</a
+        >
+      </div>
+      <div>
+        <h4 class='fw-regular uppercase'>CALL US!</h4>
+        <a href='tel:+1-347-202-9185' class='dp-block fw-bold margin-block-start-4'
+          >+1-347-202-9185</a
+        >
+        <a href='tel:+1-347-202-3427' class='fw-bold'>+1-347-202-3427</a>
+      </div>
+      <div>
+        <h4 class='fw-regular uppercase'>Email</h4>
+        <a href='mailto:ontimesolution@gmail.com' class='dp-block fw-bold margin-block-start-4'
+          >ontimesolution@gmail.com</a
+        >
+        <a href='mailto:nelsoncabrera@yahoo.com' class='fw-bold'>nelsoncabrera@yahoo.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div class='form-container'>
+    <h3 class='txt-neutral-100 fs-800 margin-block-end-4'>Get in Touch</h3>
+
+    <form action='#' method='POST' class='form flow'>
+      <div>
+        <label for='name'>Your name:</label>
+        <input type='text' id='name' name='name' required />
+      </div>
+
+      <div>
+        <label for='email'>Email address:</label>
+        <input type='email' id='email' name='email' required />
+      </div>
+
+      <div>
+        <label for='message'>Write your message:</label>
+        <textarea id='message' name='message' required></textarea>
+      </div>
+
+      <button class='btn margin-block-start-10' data-state='secondary' type='submit'>Submit</button>
+    </form>
+  </div>
+
+  <style lang='scss' is:global>
+    @use "../../sass/abstracts" as *;
+    .stats.grid-auto-fit {
+      --min-item-width: #{rem(180)};
+
+      @include mq(medium) {
+        --min-item-width: #{rem(280)};
+      }
+
+      @include mq(large) {
+        --min-item-width: #{rem(180)};
+        --grid-gap-row: #{rem(40)};
+      }
+    }
+  </style>
+</Sections>

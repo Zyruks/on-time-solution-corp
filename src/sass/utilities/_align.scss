@@ -3,3 +3,21 @@
 .justify-space-between {
   justify-content: space-between;
 }
+
+.justify-item-flex-start {
+  @include mq(medium) {
+    justify-items: flex-start;
+  }
+}
+
+.items-flex-start {
+  @include mq(medium) {
+    justify-self: flex-start;
+  }
+}
+
+.items-flex-end {
+  @include mq(medium) {
+    justify-self: flex-end;
+  }
+}

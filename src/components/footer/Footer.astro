@@ -1,0 +1,36 @@
+---
+import LocationIcon from "@components/icons/Location-icon.astro"
+import SendIcon from "@components/icons/Send-icon.astro"
+import Nav from "@components/navbar/Nav.astro"
+---
+
+<footer class='footer | bg-primary-400 padding-block-10'>
+  <div class='container txt-neutral-100'>
+    <div class='even-columns'>
+      <ul class='items-flex-start fs-700 fw-bold'>
+        <li>Explore Our Services.</li>
+        <li>Contact Us.</li>
+        <li>Stay Connected.</li>
+      </ul>
+
+      <div class='contact-container flow items-flex-end'>
+        <div class='flex-group'>
+          <LocationIcon />
+          <a href='#'>350 Fifth Avenue <br /> New York, NY 10118</a>
+        </div>
+        <div class='flex-group'>
+          <SendIcon />
+          <div class='email-container'>
+            <a href='mailto:nelsoncabrera@yahoo.com'>nelsoncabrera@yahoo.com</a>
+            <a href='mailto:ontimesolution@gmail.com'>ontimesolution@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='divider'></div>
+    <div class='even-columns justify-item-flex-start'>
+      <Nav id='footer-nav' />
+      <p class='txt-neutral-100 items-flex-end fw-bold'>@ Copyright 2023. All Right Reserved</p>
+    </div>
+  </div>
+</footer>

@@ -1,7 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "verbatimModuleSyntax": true,
     "strict": true,
     "target": "esnext",
     "moduleResolution": "node",
@@ -11,12 +10,16 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "checkJs": true,
+    "allowImportingTsExtensions": true,
+    "strictNullChecks": true,
+    "allowJs": true,
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "*": ["*", "commitlint.config.cjs", "astro.config.mjs"]
+      "astro:content": ["astro/types/content.d.ts"],
+      "*": ["*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/**/**/**/*"],
   "exclude": ["node_modules", "**/*.test.ts", "astro.config.mjs"]
 }

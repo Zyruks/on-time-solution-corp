@@ -1,0 +1,32 @@
+---
+import AmericanStandardLogo from "@components/icons/American-standard-logo.astro"
+import DeltaLogo from "@components/icons/Delta-logo.astro"
+import Kohler from "@components/icons/Kohler.astro"
+import NavienLogo from "@components/icons/Navien-logo.astro"
+import WmLogo from "@components/icons/Wm-logo.astro"
+---
+
+<WmLogo />
+<NavienLogo />
+<Kohler />
+<DeltaLogo />
+<AmericanStandardLogo />
+
+<!--  this component should be other type more like a layout -->
+<style lang='scss' is:global>
+  @use "../../sass/abstracts/" as *;
+
+  .brands .brands-container {
+    --min-item-width: #{rem(120)};
+
+    align-items: center;
+
+    @include mq(medium) {
+      --min-item-width: #{rem(200)};
+    }
+
+    @include mq(large) {
+      --min-item-width: #{rem(150)};
+    }
+  }
+</style>

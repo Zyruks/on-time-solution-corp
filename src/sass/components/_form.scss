@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.contact-us .container {
+  --min-item-width: #{rem(500)};
+}
+
+.form-container {
+  inline-size: 100%;
+
+  max-inline-size: rem(500);
+  margin-inline: auto;
+}
+
+.form {
+  align-items: flex-start;
+
+  padding: rem(16);
+  border: 1px solid rgb(255 255 255 / 50%);
+  border-radius: rem(8);
+
+  color: $color-neutral-100;
+  font-weight: 700;
+
+  box-shadow: 0 0 rem(6) rgb(0 0 0 / 80%);
+  inline-size: 100%;
+}
+
+textarea {
+  block-size: rem(200);
+}
+
+.form input,
+.form textarea {
+  border: 1px solid $color-neutral-100;
+  border-radius: rem(2);
+
+  color: $color-neutral-100;
+
+  background-color: $color-primary-400;
+  padding-inline-start: 1rem;
+}
+
+.form div {
+  display: grid;
+}

@@ -1,12 +1,20 @@
 import { defineConfig } from 'astro/config';
 
 // import sitemap from "@astrojs/sitemap";
-import image from "@astrojs/image";
 
 import compress from "astro-compress";
 
+import robotsTxt from "astro-robots-txt";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [ image({}), compress({
-  })]
-});
+  site: "https://ontimesolutioncorp.com",
+  integrations: [
+    compress({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    robotsTxt({
+      host: "ontimesolutioncorp.com",
+    }),
+  ],
+})

@@ -1,14 +1,18 @@
 ---
-import "../sass/main.scss"
+import Hero from "@components/hero/Hero.astro"
+import Reviews from "@layouts/sections/Reviews.astro"
+import General from "@layouts/General.astro"
+import ContactUs from "@layouts/sections/Contact-us.astro"
+import OurServices from "@layouts/sections/Our-services.astro"
+import WhyChooseUs from "@layouts/sections/Why-choose-us.astro"
+import SectionBrand from "@layouts/sections/Section-brand.astro"
 ---
 
-<html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <title>On Time Solution Corp</title>
-  </head>
-  <body> </body>
-</html>
+<General>
+  <Hero />
+  <SectionBrand />
+  <OurServices />
+  <WhyChooseUs />
+  <ContactUs />
+  <Reviews />
+</General>

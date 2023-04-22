@@ -1,0 +1,38 @@
+---
+const { file, alt } = Astro.props
+---
+
+<picture>
+  <source
+    type='image/avif'
+    srcset={`
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_avif,w_250/v1682118126/on-time-solution/our-work/${file}.jpg 250w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_avif,w_400/v1682118126/on-time-solution/our-work/${file}.jpg 400w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_avif,w_600/v1682118126/on-time-solution/our-work/${file}.jpg 600w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_avif,w_800/v1682118126/on-time-solution/our-work/${file}.jpg 800w
+    `}
+  />
+  <source
+    type='image/webp'
+    srcset={`
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_webp,w_250/v1682118126/on-time-solution/our-work/${file}.jpg 250w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_webp,w_400/v1682118126/on-time-solution/our-work/${file}.jpg 400w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_webp,w_600/v1682118126/on-time-solution/our-work/${file}.jpg 600w,
+      https://res.cloudinary.com/djrny1bwv/image/upload/f_webp,w_800/v1682118126/on-time-solution/our-work/${file}.jpg 800w
+    `}
+  />
+  <img
+    src={`https://res.cloudinary.com/djrny1bwv/image/upload/w_250/v1682118126/on-time-solution/our-work/${file}.jpg`}
+    alt={alt}
+    class='work-images'
+    width='240'
+    height='250'
+  />
+</picture>
+
+<style>
+  .work-images {
+    border-radius: 0.4rem;
+    background-color: grey;
+  }
+</style>

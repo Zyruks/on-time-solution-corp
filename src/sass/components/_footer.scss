@@ -1,0 +1,51 @@
+@use "../abstracts/" as *;
+
+.contact-container .flex-group img {
+  inline-size: 100%;
+  max-inline-size: 2rem;
+}
+
+.contact-container .flex-group {
+  align-items: center;
+}
+
+.footer .container {
+  display: grid;
+  gap: 2rem;
+
+  .email-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+.divider {
+  inline-size: 100%;
+  block-size: rem(1);
+
+  background-color: $color-neutral-100;
+}
+
+.footer {
+  a {
+    text-decoration: underline;
+    text-decoration-color: $color-primary-400;
+
+    transition: color 300ms ease-in-out, text-decoration 300ms ease-in-out;
+  }
+
+  a:hover {
+    color: $color-primary-100;
+    text-decoration: underline;
+  }
+
+  nav {
+    li {
+      white-space: nowrap;
+
+      inline-size: 100%;
+    }
+  }
+}

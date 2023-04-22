@@ -1,0 +1,29 @@
+---
+import Picture from "@components/picture/picture.astro"
+import General from "@layouts/General.astro"
+import { getCollection } from "astro:content"
+const workImages = await getCollection("work")
+---
+
+<General>
+  <section class='our-work container margin-block-13'>
+    <h2 class='heading-2 text-center margin-block-end-10 txt-primary-400'>Our Work</h2>
+    <div class='image-container grid-auto-fit'>
+      {
+        workImages.map((images) =>
+          images.data.images.map((link) => <Picture file={link} alt='bunch of images of workers' />)
+        )
+      }
+    </div>
+  </section>
+</General>
+
+<style lang='scss'>
+  .image-container {
+    --min-item-width: 15rem;
+    --grid-gap-column: 0.5rem;
+    --grid-gap-row: 0.5rem;
+
+    justify-items: center;
+  }
+</style>

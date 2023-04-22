@@ -30,7 +30,8 @@
   position: absolute;
   z-index: -2;
 
-  background-image: url("/assets/images/hero-bg.png");
+  background-image: url("https://res.cloudinary.com/djrny1bwv/image/upload/w_480,h_320,c_fill,f_auto,q_auto/v1681766450/hero-bg_ojgscm.png");
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -40,6 +41,22 @@
   inset: 0;
   inline-size: 120%;
   block-size: 100%;
+
+  @media (min-width: 92em) {
+    background-image: url("https://res.cloudinary.com/djrny1bwv/image/upload/w_576,h_384,c_fill,f_auto,q_auto/v1681766450/hero-bg_ojgscm.png");
+  }
+
+  @media (min-width: 123em) {
+    background-image: url("https://res.cloudinary.com/djrny1bwv/image/upload/w_768,h_512,c_fill,f_auto,q_auto/v1681766450/hero-bg_ojgscm.png");
+  }
+
+  @media (min-width: 158em) {
+    background-image: url("https://res.cloudinary.com/djrny1bwv/image/upload/w_992,h_662,c_fill,f_auto,q_auto/v1681766450/hero-bg_ojgscm.png");
+  }
+
+  @media (min-width: 192em) {
+    background-image: url("https://res.cloudinary.com/djrny1bwv/image/upload/w_1200,h_800,c_fill,f_auto,q_auto/v1681766450/hero-bg_ojgscm.png");
+  }
 }
 
 .hero-bg-gradient {

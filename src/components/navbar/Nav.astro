@@ -1,10 +1,15 @@
-<nav id='primary-nav' class='nav' aria-hidden='true'>
-  <ul class='flow'>
-    <li class='nav-item' data-status='active'><a href='./#our-services'>Our Services</a></li>
-    <li class='nav-item'><a href='./#why-choose-us'>Why Us</a></li>
-    <li class='nav-item'><a href='./our-work'>Our Work</a></li>
+---
+const { id = "primary-nav" } = Astro.props
+---
 
-    <li class='nav-item'><a href='./#contact-us'>Contact Us</a></li>
+<nav id={id} class='nav' aria-hidden='true' role='navigation'>
+  <ul class='flow' role='menu'>
+    <li class='nav-item' data-status='active' role='menuitem' aria-current='page'>
+      <a href='./#our-services' tabindex='-1'>Our Services</a>
+    </li>
+    <li class='nav-item' role='menuitem'><a href='./#why-choose-us' tabindex='-1'>Why Us</a></li>
+    <li class='nav-item' role='menuitem'><a href='./our-work' tabindex='-1'>Our Work</a></li>
+    <li class='nav-item' role='menuitem'><a href='./#contact-us' tabindex='-1'>Contact Us</a></li>
   </ul>
   <div class='social-container'>
     <img src='#' alt='' /><img src='#' alt='' />

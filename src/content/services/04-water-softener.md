@@ -7,4 +7,6 @@ image: "04-water-softener_vbqql5"
 dataState: "inactive"
 dataItem: "item-four"
 alt: "water softener installation and repair"
+imageWidth: "800"
+imageHeight: "450"
 ---

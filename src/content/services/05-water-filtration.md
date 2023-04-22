@@ -7,4 +7,6 @@ image: "05-water_filtration_eycf83"
 dataState: "inactive"
 dataItem: "item-five"
 alt: "water filtration"
+imageWidth: "800"
+imageHeight: "571"
 ---

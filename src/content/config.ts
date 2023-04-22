@@ -10,6 +10,8 @@ const serviceSchema = defineCollection({
     dataItem: z.string(),
     dataState: z.string(),
     alt: z.string(),
+    imageWidth: z.string(),
+    imageHeight: z.string(),
   }),
 })
 

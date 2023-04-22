@@ -7,4 +7,6 @@ image: "07-gasline_wywkcx"
 dataState: "inactive"
 dataItem: "item-seven"
 alt: "Gas line repair and installation services for safe and efficient use of your gas-powered appliances."
+imageWidth: "800"
+imageHeight: "450"
 ---

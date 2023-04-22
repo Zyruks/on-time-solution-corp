@@ -28,8 +28,8 @@ const services = await getCollection("services")
             src={`https://res.cloudinary.com/djrny1bwv/image/upload/w_250/v1682118126/on-time-solution/services/${service.data.image}.jpg`}
             alt={service.data.alt}
             class='service-img'
-            width='800'
-            height='400'
+            width={service.data.imageWidth}
+            height={service.data.imageHeight}
           />
         </picture>
 

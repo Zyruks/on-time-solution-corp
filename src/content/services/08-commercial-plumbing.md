@@ -7,4 +7,6 @@ image: "08-industrial_irhicx"
 dataState: "inactive"
 dataItem: "item-eight"
 alt: "Commercial plumbing services"
+imageWidth: "800"
+imageHeight: "600"
 ---

@@ -7,4 +7,6 @@ image: "01-drain-cleaning_bv9r5i"
 dataState: "active"
 dataItem: "item-one"
 alt: "Professional drain cleaning services"
+imageWidth: "800"
+imageHeight: "400"
 ---

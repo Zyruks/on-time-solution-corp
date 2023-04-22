@@ -7,4 +7,6 @@ image: "03-boiler_uq0efo"
 dataState: "inactive"
 dataItem: "item-three"
 alt: "boiler installation and repair"
+imageWidth: "800"
+imageHeight: "450"
 ---

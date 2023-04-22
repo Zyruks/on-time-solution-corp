@@ -7,4 +7,6 @@ image: "06-showerandbath_avveoz"
 dataState: "inactive"
 dataItem: "item-six"
 alt: "New shower or tub being installed"
+imageWidth: "800"
+imageHeight: "571"
 ---

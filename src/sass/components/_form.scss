@@ -6,8 +6,8 @@
 
 .form-container {
   inline-size: 100%;
-  margin-block-start: $size-8;
-  max-inline-size: rem(600);
+
+  max-inline-size: rem(500);
   margin-inline: auto;
 }
 
@@ -25,6 +25,10 @@
   inline-size: 100%;
 }
 
+textarea {
+  block-size: rem(200);
+}
+
 .form input,
 .form textarea {
   border: 1px solid $color-neutral-100;
@@ -38,8 +42,4 @@
 
 .form div {
   display: grid;
-}
-
-textarea {
-  block-size: rem(200);
 }

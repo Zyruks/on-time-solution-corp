@@ -2,6 +2,7 @@
 import Footer from "@components/footer/Footer.astro"
 import "../sass/main.scss"
 import Header from "@components/header/Header.astro"
+const { nobg } = Astro.props
 ---
 
 <html lang='en'>
@@ -13,7 +14,7 @@ import Header from "@components/header/Header.astro"
     <title>On Time Solution Corp</title>
   </head>
   <body>
-    <Header />
+    {nobg ? <Header nobg='none' /> : <Header />}
 
     <main>
       <slot />

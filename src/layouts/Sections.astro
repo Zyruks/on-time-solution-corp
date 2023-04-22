@@ -8,7 +8,7 @@ type Props = {
 const { sectionClass, containerClass, id }: Props = Astro.props
 ---
 
-<section id={id} class={`${sectionClass}  padding-block-10`}>
+<section id={id} class={`${sectionClass}  `}>
   <div class={`container ${containerClass}`}>
     <slot />
   </div>

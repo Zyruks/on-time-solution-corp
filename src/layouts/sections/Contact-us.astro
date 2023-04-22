@@ -3,7 +3,10 @@ import Sections from "@layouts/Sections.astro"
 import SectionHeader from "@components/section-header/Section-header.astro"
 ---
 
-<Sections id='contact-us' sectionClass='contact-us bg-primary-400 ' containerClass='grid-auto-fit'>
+<Sections
+  id='contact-us'
+  sectionClass='contact-us bg-primary-400 padding-block-10'
+  containerClass='grid-auto-fit'>
   <div>
     <SectionHeader
       title='Contact Us'
@@ -11,10 +14,10 @@ import SectionHeader from "@components/section-header/Section-header.astro"
       titleClass='txt-neutral-100'
       descriptionClass='txt-neutral-100'
     />
-    <div class='stats grid-auto-fit txt-neutral-100 margin-block-start-8'>
-      <div>
+    <div class='stats grid-auto-fit txt-neutral-100'>
+      <div class='flow'>
         <h3 class='fw-regular uppercase'>Office Hours</h3>
-        <p class='fw-bold margin-block-start-4'>MONDAY-FRIDAY</p>
+        <p class='fw-bold'>MONDAY-FRIDAY</p>
         <span class='fw-bold'>9:00 am to 5:00 pm</span>
       </div>
       <div>
@@ -44,7 +47,7 @@ import SectionHeader from "@components/section-header/Section-header.astro"
   </div>
 
   <div class='form-container'>
-    <h3 class='txt-neutral-100 fs-800'>Get in Touch</h3>
+    <h3 class='txt-neutral-100 fs-800 margin-block-end-4'>Get in Touch</h3>
 
     <form action='#' method='POST' class='form flow'>
       <div>

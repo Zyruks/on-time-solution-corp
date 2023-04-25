@@ -4,6 +4,7 @@ import "../sass/main.scss"
 import Header from "@components/header/Header.astro"
 const { nobg } = Astro.props
 import { SEO } from "astro-seo"
+import Analytics from "./Analytics.astro"
 ---
 
 <html lang='en'>
@@ -27,6 +28,7 @@ import { SEO } from "astro-seo"
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>On Time Solution Corp</title>
+    <Analytics />
   </head>
   <body>
     {nobg ? <Header nobg='none' /> : <Header />}
